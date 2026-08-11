@@ -1,0 +1,147 @@
+import {
+  FaDumbbell,
+  FaFlag,
+  FaPersonRunning,
+  FaShieldHalved,
+  FaUserShield,
+  FaUsersGear,
+  FaMedal,
+  FaStopwatch
+} from 'react-icons/fa6';
+import { imagePlaceholders } from './config';
+
+export const courses = [
+  {
+    slug: 'army',
+    title: 'Army Physical Training',
+    category: 'Army',
+    icon: FaShieldHalved,
+    image: imagePlaceholders.running,
+    description: 'Preparation for Army physical fitness, running, endurance and strength requirements.',
+    eligibility: 'Aspirants preparing for Army recruitment physical tests.',
+    duration: '3 to 6 months',
+    fee: 'Demo fee: Contact academy',
+    trainingFocus: ['Running practice', 'Push-ups and sit-ups', 'Endurance building', 'Routine discipline'],
+    whoShouldJoin: 'Students preparing for Army recruitment who need structured fitness, stamina and discipline.',
+    routine: ['Warm-up and mobility', 'Timed running drills', 'Strength circuit', 'Cool down and assessment'],
+    benefits: ['Better stamina', 'Improved strength', 'Daily accountability', 'Test-oriented practice'],
+    faq: [
+      { q: 'Are physical standards guaranteed?', a: 'No. Training improves preparation, but official standards and selections depend on recruitment rules and student performance.' },
+      { q: 'Can beginners join?', a: 'Yes. Trainers assess fitness and guide students with progressive routines.' }
+    ]
+  },
+  {
+    slug: 'air-force',
+    title: 'Air Force Physical Training',
+    category: 'Air Force',
+    icon: FaFlag,
+    image: imagePlaceholders.training,
+    description: 'Fitness, endurance, running and strength preparation for Air Force aspirants.',
+    eligibility: 'Air Force physical preparation aspirants.',
+    duration: '3 months',
+    fee: 'Demo fee: Contact academy',
+    trainingFocus: ['Speed endurance', 'Core strength', 'Agility', 'Fitness testing'],
+    whoShouldJoin: 'Aspirants who want a disciplined physical routine for Air Force recruitment preparation.',
+    routine: ['Dynamic warm-up', 'Sprint intervals', 'Bodyweight strength', 'Recovery stretching'],
+    benefits: ['Higher work capacity', 'Better running form', 'Trainer guidance', 'Confidence for tests'],
+    faq: [{ q: 'Is coaching exam-specific?', a: 'Training is physical-test oriented and can be adjusted after official notices.' }]
+  },
+  {
+    slug: 'navy',
+    title: 'Navy Physical Training',
+    category: 'Navy',
+    icon: FaUsersGear,
+    image: imagePlaceholders.ground,
+    description: 'Structured fitness and endurance training for Navy recruitment preparation.',
+    eligibility: 'Navy recruitment aspirants.',
+    duration: '3 to 6 months',
+    fee: 'Demo fee: Contact academy',
+    trainingFocus: ['Endurance', 'Strength', 'Flexibility', 'Discipline'],
+    whoShouldJoin: 'Students preparing for Navy physical stages and general fitness improvement.',
+    routine: ['Group warm-up', 'Long run', 'Pull-up practice', 'Core and mobility'],
+    benefits: ['Consistent routine', 'Better endurance', 'Physical confidence', 'Group motivation'],
+    faq: [{ q: 'Do you train daily?', a: 'Demo schedule includes morning and evening batches from Monday to Saturday.' }]
+  },
+  {
+    slug: 'police-constable',
+    title: 'Police Constable Training',
+    category: 'Police',
+    icon: FaUserShield,
+    image: imagePlaceholders.students,
+    description: 'Physical preparation for police constable recruitment with running and strength drills.',
+    eligibility: 'Police constable recruitment aspirants.',
+    duration: '2 to 4 months',
+    fee: 'Demo fee: Contact academy',
+    trainingFocus: ['Timed running', 'Agility', 'Strength basics', 'Physical test practice'],
+    whoShouldJoin: 'Candidates preparing for state police constable physical tests.',
+    routine: ['Warm-up', 'Track session', 'Strength set', 'Progress review'],
+    benefits: ['Regular testing', 'Focused drills', 'Improved discipline', 'Personal guidance'],
+    faq: [{ q: 'Are timings flexible?', a: 'Batch timings can be updated by the academy owner in the contact configuration.' }]
+  },
+  {
+    slug: 'head-constable',
+    title: 'Head Constable Training',
+    category: 'Police',
+    icon: FaMedal,
+    image: imagePlaceholders.events,
+    description: 'Fitness and physical test preparation for Head Constable recruitment.',
+    eligibility: 'Head Constable aspirants.',
+    duration: '2 to 4 months',
+    fee: 'Demo fee: Contact academy',
+    trainingFocus: ['Running', 'Strength endurance', 'Mobility', 'Assessment'],
+    whoShouldJoin: 'Aspirants who need a repeatable physical preparation routine.',
+    routine: ['Mobility', 'Endurance drills', 'Bodyweight training', 'Cool down'],
+    benefits: ['Training consistency', 'Stamina gains', 'Focused mentorship', 'Routine tracking'],
+    faq: [{ q: 'Is this beginner-friendly?', a: 'Yes. Intensity can be scaled according to the student fitness level.' }]
+  },
+  {
+    slug: 'si',
+    title: 'Sub-Inspector (SI) Physical Training',
+    category: 'SI',
+    icon: FaStopwatch,
+    image: imagePlaceholders.running,
+    description: 'Focused physical fitness preparation for SI recruitment aspirants.',
+    eligibility: 'Sub-Inspector recruitment aspirants.',
+    duration: '3 to 6 months',
+    fee: 'Demo fee: Contact academy',
+    trainingFocus: ['Speed', 'Endurance', 'Strength', 'Test simulation'],
+    whoShouldJoin: 'SI aspirants who want disciplined running, agility and strength practice.',
+    routine: ['Sprint mechanics', 'Timed run', 'Strength stations', 'Weekly testing'],
+    benefits: ['Better pacing', 'Test confidence', 'Trainer correction', 'Progress checks'],
+    faq: [{ q: 'Do you provide written exam coaching?', a: 'This version focuses on physical preparation and academy showcase content.' }]
+  },
+  {
+    slug: 'group-d',
+    title: 'Group D Physical Training',
+    category: 'Group D',
+    icon: FaDumbbell,
+    image: imagePlaceholders.training,
+    description: 'Physical and fitness preparation for Group D examinations and recruitment tests.',
+    eligibility: 'Group D recruitment aspirants.',
+    duration: '2 to 3 months',
+    fee: 'Demo fee: Contact academy',
+    trainingFocus: ['Basic fitness', 'Running', 'Strength', 'Routine building'],
+    whoShouldJoin: 'Candidates who need foundational physical preparation and regular practice.',
+    routine: ['Warm-up', 'Fitness drills', 'Running practice', 'Stretching'],
+    benefits: ['Improved baseline fitness', 'Daily structure', 'Group training', 'Confidence'],
+    faq: [{ q: 'Can demo fees be changed?', a: 'Yes. Edit course data or backend seed data anytime.' }]
+  },
+  {
+    slug: 'other-government-exams',
+    title: 'Other Government Exam Training',
+    category: 'Government Exams',
+    icon: FaPersonRunning,
+    image: imagePlaceholders.ground,
+    description: 'Customized physical preparation for other government recruitment examinations.',
+    eligibility: 'Aspirants preparing for physical stages in government recruitment.',
+    duration: 'Custom duration',
+    fee: 'Demo fee: Contact academy',
+    trainingFocus: ['Custom routine', 'Endurance', 'Strength', 'Assessment'],
+    whoShouldJoin: 'Students preparing for any recruitment exam with a physical fitness stage.',
+    routine: ['Fitness assessment', 'Custom drills', 'Practice tests', 'Review'],
+    benefits: ['Flexible focus', 'Personal guidance', 'Fitness tracking', 'Disciplined environment'],
+    faq: [{ q: 'Can training be customized?', a: 'Yes. Trainers can adapt routines to the target recruitment test.' }]
+  }
+];
+
+export const getCourseBySlug = (slug) => courses.find((course) => course.slug === slug);
