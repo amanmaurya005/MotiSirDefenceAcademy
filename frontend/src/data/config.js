@@ -1,8 +1,8 @@
 export const academyConfig = {
   academyName: 'Moti sir defence academy',
   tagline: 'Physical Training • Discipline • Fitness • Guidance',
-  phone: '+91 98765 43210',
-  whatsappNumber: '919876543210',
+  phone: '+91 89479 56999',
+  whatsappNumber: '918947956999',
   email: 'info@motisirdefenceacademy.com',
   address: 'Near Parade Ground, Main Road, Your City, India',
   trainingHours: {

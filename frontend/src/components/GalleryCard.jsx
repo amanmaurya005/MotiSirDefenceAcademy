@@ -1,3 +1,4 @@
+import React from "react";
 const GalleryCard = ({ item, onClick }) => (
   <button className="gallery-card reveal" onClick={onClick} type="button">
     <img src={item.image} alt={item.title} loading="lazy" />
