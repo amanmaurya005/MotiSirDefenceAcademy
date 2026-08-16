@@ -40,9 +40,7 @@ export const testimonials = [
 ];
 
 export const trainers = [
-  { name: 'Captain Training Coach', position: 'Physical Training Instructor', experience: '8+ Years Experience', specialization: 'Running, endurance and discipline drills', image: imagePlaceholders.trainer },
-  { name: 'Fitness Coach Arjun', position: 'Strength & Conditioning Coach', experience: '6+ Years Experience', specialization: 'Strength, agility and bodyweight training', image: imagePlaceholders.trainer },
-  { name: 'Coach Priya Sharma', position: 'Student Fitness Mentor', experience: '5+ Years Experience', specialization: 'Beginner fitness and progress tracking', image: imagePlaceholders.trainer }
+  { name: 'Captain Training Coach', position: 'Physical Training Instructor', experience: '14+ Years Experience', specialization: 'Running, endurance and discipline drills', image: imagePlaceholders.trainer },
 ];
 
 export const galleryItems = [

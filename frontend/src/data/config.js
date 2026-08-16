@@ -3,21 +3,20 @@ export const academyConfig = {
   tagline: 'Physical Training • Discipline • Fitness • Guidance',
   phone: '+91 89479 56999',
   whatsappNumber: '918947956999',
-  email: 'info@motisirdefenceacademy.com',
-  address: 'Near Parade Ground, Main Road, Your City, India',
+  email: 'motisirdefenceacademy@gmail.com',
+  address: 'sports complex, athletics ground, Rajasthan University Campus, Jhalana Institutional Area, Jhalana Doongri, Jaipur, Rajasthan 302004',
   trainingHours: {
     days: 'Monday - Saturday',
     morning: '5:00 AM - 8:00 AM',
-    evening: '4:00 PM - 7:00 PM'
+    evening: '5:00 PM - 7:00 PM'
   },
   googleMapsEmbedUrl:
-    'https://www.google.com/maps?q=India%20Gate%20New%20Delhi&output=embed',
-  googleDirectionsUrl: 'https://www.google.com/maps/search/?api=1&query=India+Gate+New+Delhi',
+    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3558.503940778158!2d75.8234904!3d26.8874973!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396db700046a2adb%3A0x5ab13fabf95a6f0a!2sRajasthan%20University%20sports%20complex!5e0!3m2!1sen!2sin!4v1786881287954!5m2!1sen!2sin',
   socialLinks: {
-    youtube: 'https://www.youtube.com/',
-    instagram: 'https://www.instagram.com/',
-    whatsapp: 'https://wa.me/919876543210',
-    facebook: 'https://www.facebook.com/'
+    youtube: 'https://www.youtube.com/@motisirdefanceacademy',
+    instagram: 'https://www.instagram.com/moti_sir_defence_academy/',
+    whatsapp: 'https://wa.me/918947956999',
+    facebook: 'https://www.facebook.com/profile.php?id=61573025770699'
   }
 };
 

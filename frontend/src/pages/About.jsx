@@ -50,7 +50,7 @@ const About = () => (
     <section className="section section--light">
       <div className="section-head">
         <p className="eyebrow">Trainers</p>
-        <h2>Meet Our Training Team</h2>
+        <h2>Meet Our Trainer</h2>
       </div>
       <div className="grid grid--3">
         {trainers.map((trainer) => <TrainerCard key={trainer.name} trainer={trainer} />)}

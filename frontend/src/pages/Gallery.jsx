@@ -22,7 +22,6 @@ const Gallery = () => {
       <section className="page-hero" style={{ backgroundImage: `linear-gradient(90deg, rgba(11,31,51,.88), rgba(17,17,17,.55)), url(${imagePlaceholders.students})` }}>
         <p className="eyebrow">Gallery</p>
         <h1>Training, Ground & Achievement Moments</h1>
-        <p>Demo photos and videos are ready to replace with real academy media.</p>
       </section>
       <section className="section section--light">
         <div className="filter-row" role="tablist" aria-label="Gallery categories">

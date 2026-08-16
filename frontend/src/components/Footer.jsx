@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FaInstagram, FaShieldHalved, FaWhatsapp, FaYoutube } from 'react-icons/fa6';
+import { FaFacebook, FaInstagram, FaShieldHalved, FaWhatsapp, FaYoutube } from 'react-icons/fa6';
 import { academyConfig } from '../data/config';
 import { courses } from '../data/courses';
 
@@ -14,6 +14,7 @@ const Footer = () => (
           <a href={academyConfig.socialLinks.youtube} aria-label="YouTube"><FaYoutube /></a>
           <a href={academyConfig.socialLinks.instagram} aria-label="Instagram"><FaInstagram /></a>
           <a href={academyConfig.socialLinks.whatsapp} aria-label="WhatsApp"><FaWhatsapp /></a>
+          <a href={academyConfig.socialLinks.facebook} aria-label="Facebook"><FaFacebook /></a>
         </div>
       </div>
       <div>
