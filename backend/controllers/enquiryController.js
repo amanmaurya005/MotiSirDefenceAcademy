@@ -1,6 +1,7 @@
 import validator from 'validator';
 import Enquiry from '../models/Enquiry.js';
 import mongoose from 'mongoose';
+import { sendEnquiryEmail } from '../services/mailService.js';
 
 const clean = (value) => validator.escape(String(value || '').trim());
 
@@ -33,7 +34,29 @@ export const createEnquiry = async (req, res, next) => {
     }
 
     const enquiry = await Enquiry.create(payload);
-    res.status(201).json({ success: true, message: 'Enquiry submitted successfully.', data: enquiry });
+    let emailStatus = 'pending';
+
+    try {
+      const emailResult = await sendEnquiryEmail(enquiry);
+      emailStatus = emailResult.sent ? 'sent' : 'skipped';
+      enquiry.emailNotificationStatus = emailStatus;
+      enquiry.notifiedAt = emailResult.sent ? new Date() : undefined;
+      enquiry.emailNotificationError = emailResult.reason;
+      await enquiry.save();
+    } catch (mailError) {
+      emailStatus = 'failed';
+      enquiry.emailNotificationStatus = emailStatus;
+      enquiry.emailNotificationError = mailError.message;
+      await enquiry.save();
+      console.error('Failed to send enquiry email:', mailError.message);
+    }
+
+    res.status(201).json({
+      success: true,
+      message: 'Enquiry submitted successfully. We received your details.',
+      emailStatus,
+      data: enquiry
+    });
   } catch (error) {
     next(error);
   }

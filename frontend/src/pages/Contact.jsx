@@ -31,11 +31,11 @@ const Contact = () => {
     if (!validate()) return;
     setSubmitting(true);
     try {
-      await submitEnquiry(form);
-      setStatus('Thank you. Your enquiry has been submitted successfully.');
+      const response = await submitEnquiry(form);
+      setStatus(response.message || 'Thank you. Your enquiry has been submitted successfully.');
       setForm(initialForm);
-    } catch {
-      setStatus('Something went wrong. Please try again later.');
+    } catch (error) {
+      setStatus(error.response?.data?.message || 'Something went wrong. Please try again later.');
     } finally {
       setSubmitting(false);
     }

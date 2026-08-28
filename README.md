@@ -57,9 +57,16 @@ Create `backend/.env`:
 PORT=5000
 MONGO_URI=YOUR_MONGODB_CONNECTION_STRING
 FRONTEND_URL=http://localhost:5173
+CONTACT_EMAIL_TO=rathoremotisingh651@gmail.com
+SMTP_SERVICE=gmail
+SMTP_USER=YOUR_GMAIL_ADDRESS
+SMTP_PASS=YOUR_GMAIL_APP_PASSWORD
+MAIL_FROM="Moti Sir Defence Academy <YOUR_GMAIL_ADDRESS>"
 ```
 
 Example files are included as `frontend/.env.example` and `backend/.env.example`.
+
+For Gmail SMTP, create an app password in your Google account and use that value for `SMTP_PASS`. Do not use your normal Gmail password.
 
 ## Run Locally
 
@@ -99,6 +106,8 @@ GET  /api/courses
 GET  /api/courses/:slug
 POST /api/enquiries
 ```
+
+`POST /api/enquiries` saves the enquiry in MongoDB and sends the student details to `CONTACT_EMAIL_TO` using Nodemailer when SMTP credentials are configured.
 
 ## Replace Academy Information
 
