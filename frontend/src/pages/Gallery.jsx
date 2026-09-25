@@ -1,6 +1,7 @@
 import React from 'react';
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { FaChevronLeft, FaChevronRight, FaPlay, FaXmark } from 'react-icons/fa6';
+import { fetchGallery } from '../api';
 import GalleryCard from '../components/GalleryCard';
 import SEO from '../components/SEO';
 import { imagePlaceholders } from '../data/config';
@@ -11,10 +12,29 @@ const categories = ['All', 'Training', 'Running', 'Students', 'Events', 'Ground'
 const Gallery = () => {
   const [category, setCategory] = useState('All');
   const [activeIndex, setActiveIndex] = useState(null);
-  const filtered = useMemo(() => category === 'All' ? galleryItems : galleryItems.filter((item) => item.category === category), [category]);
+  const [items, setItems] = useState(galleryItems);
+  const filtered = useMemo(() => category === 'All' ? items : items.filter((item) => item.category === category), [category, items]);
   const active = activeIndex !== null ? filtered[activeIndex] : null;
 
   const move = (step) => setActiveIndex((index) => (index + step + filtered.length) % filtered.length);
+
+  useEffect(() => {
+    let isMounted = true;
+
+    fetchGallery().then((images) => {
+      if (isMounted) {
+        setItems(images);
+      }
+    });
+
+    return () => {
+      isMounted = false;
+    };
+  }, []);
+
+  useEffect(() => {
+    setActiveIndex(null);
+  }, [category]);
 
   return (
     <>
@@ -30,7 +50,7 @@ const Gallery = () => {
           ))}
         </div>
         <div className="gallery-grid">
-          {filtered.map((item, index) => <GalleryCard key={item.title} item={item} onClick={() => setActiveIndex(index)} />)}
+          {filtered.map((item, index) => <GalleryCard key={item.id || item.title} item={item} onClick={() => setActiveIndex(index)} />)}
         </div>
       </section>
       <section className="section">

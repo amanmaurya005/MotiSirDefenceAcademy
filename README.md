@@ -62,6 +62,10 @@ SMTP_SERVICE=gmail
 SMTP_USER=YOUR_GMAIL_ADDRESS
 SMTP_PASS=YOUR_GMAIL_APP_PASSWORD
 MAIL_FROM="Moti Sir Defence Academy <YOUR_GMAIL_ADDRESS>"
+CLOUDINARY_CLOUD_NAME=YOUR_CLOUDINARY_CLOUD_NAME
+CLOUDINARY_API_KEY=YOUR_CLOUDINARY_API_KEY
+CLOUDINARY_API_SECRET=YOUR_CLOUDINARY_API_SECRET
+CLOUDINARY_MAX_RESULTS=60
 ```
 
 Example files are included as `frontend/.env.example` and `backend/.env.example`.
@@ -104,10 +108,13 @@ The first `GET /api/courses` request inserts demo course data if the courses col
 ```text
 GET  /api/courses
 GET  /api/courses/:slug
+GET  /api/gallery
 POST /api/enquiries
 ```
 
 `POST /api/enquiries` saves the enquiry in MongoDB and sends the student details to `CONTACT_EMAIL_TO` using Nodemailer when SMTP credentials are configured.
+
+`GET /api/gallery` fetches images from Cloudinary. Add tags named `Training`, `Running`, `Students`, `Events`, `Ground` or `Achievements` in Cloudinary to control the gallery category. You can also set `CLOUDINARY_GALLERY_FOLDER` to fetch only one Cloudinary folder/prefix.
 
 ## Replace Academy Information
 

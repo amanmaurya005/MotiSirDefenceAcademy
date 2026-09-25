@@ -4,6 +4,7 @@ import express from 'express';
 import connectDB from './config/db.js';
 import courseRoutes from './routes/courseRoutes.js';
 import enquiryRoutes from './routes/enquiryRoutes.js';
+import galleryRoutes from './routes/galleryRoutes.js';
 import { errorHandler, notFound } from './middleware/errorHandler.js';
 
 dotenv.config();
@@ -35,6 +36,7 @@ app.get('/', (_req, res) => {
 
 app.use('/api/courses', courseRoutes);
 app.use('/api/enquiries', enquiryRoutes);
+app.use('/api/gallery', galleryRoutes);
 
 app.use(notFound);
 app.use(errorHandler);

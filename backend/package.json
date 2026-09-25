@@ -6,7 +6,8 @@
   "main": "server.js",
   "scripts": {
     "dev": "nodemon server.js",
-    "start": "node server.js"
+    "start": "node server.js",
+    "upload:achievements": "node scripts/uploadAchievementImages.js"
   },
   "dependencies": {
     "cors": "^2.8.5",

@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { courses } from './data/courses';
+import { galleryItems } from './data/siteData';
 
 const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000';
 
@@ -23,6 +24,15 @@ export const fetchCourse = async (slug) => {
     return response.data.data;
   } catch {
     return courses.find((course) => course.slug === slug);
+  }
+};
+
+export const fetchGallery = async () => {
+  try {
+    const response = await api.get('/api/gallery');
+    return response.data.data?.length ? response.data.data : galleryItems;
+  } catch {
+    return galleryItems;
   }
 };
 
